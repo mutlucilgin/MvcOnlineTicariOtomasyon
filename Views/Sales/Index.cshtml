@@ -1,0 +1,41 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<SalesTransaction>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satışlar</h2>
+<br />
+<table class="table table-striped" style="margin-top:20px">
+    <tr>
+        <th>ID</th>
+        <th>Ürün</th>
+        <th>Müşteri</th>
+        <th>Personel</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+        <th>Toplam Tutar</th>
+        <th>Tarih</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.SalesID</td>
+    <td>@x.Product.ProductName</td>
+    <td>@x.Customer.CustomerName @x.Customer.CustomerSurname</td>
+    <td>@x.Employee.EmployeeName @x.Employee.EmployeeSurname</td>
+    <td>@x.Number</td>
+    <td>@x.Price</td>
+    <td>@x.TotalPrice</td>
+    <td>@x.Date</td>
+    <td><a href="/Sales/SalesUpdate/@x.SalesID" class="btn btn-success">Güncelle</a></td>
+        <td><a href="/Sales/SalesDetail/@x.SalesID" class="btn btn-secondary">Detaylar</a></td>
+
+</tr>
+    }
+</table>
+<a href="/Sales/SalesAdd" class="btn btn-primary">Yeni Satış Yap</a>

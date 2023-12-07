@@ -1,0 +1,29 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model Employee
+@{
+    ViewBag.Title = "EmployeeAdd";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Personel Ekle</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.Label("İsim")
+    @Html.TextBoxFor(x => x.EmployeeName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Soyisim")
+    @Html.TextBoxFor(x => x.EmployeeSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Görsel")
+    @Html.TextBoxFor(x => x.EmployeeImage, new { @class = "form-control" })
+    <br />
+    @Html.Label("Departman")
+@*    @Html.DropDownListFor(x => x.DepartmentId, (List<SelectListItem>)ViewBag.departmentList,new { @class = "form-control" })*@
+    @Html.DropDownListFor(x => x.DepartmentId, (List<SelectListItem>)ViewBag.departmentList, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

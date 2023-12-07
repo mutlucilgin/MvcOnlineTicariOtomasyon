@@ -1,0 +1,30 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Employee
+@{
+    ViewBag.Title = "EmployeeUpdate";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Personel Güncelle</h2>
+<br />
+@using (Html.BeginForm("Update", "Employee", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.EmployeeID)
+    @Html.LabelFor(x => x.EmployeeName)
+    @Html.TextBoxFor(x => x.EmployeeName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.EmployeeSurname)
+    @Html.TextBoxFor(x => x.EmployeeSurname, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.EmployeeImage)
+    @Html.TextBoxFor(x => x.EmployeeImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Department)
+    @Html.DropDownListFor(x => x.DepartmentId, (List<SelectListItem>)ViewBag.departmentList, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+</div>
+}
+
