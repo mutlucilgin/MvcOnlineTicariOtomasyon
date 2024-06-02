@@ -1,8 +1,34 @@
-﻿
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.SalesTransaction
+
 @{
     ViewBag.Title = "SalesAdd";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>SalesAdd</h2>
+<br />
+<h2>Yeni Satış Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Product)
+    @Html.DropDownListFor(x => x.ProductId, (List<SelectListItem>)ViewBag.products, new { @class = "form-control" })
+    <br />
+    @Html.Label("Müşteri")
+    @Html.DropDownListFor(x => x.CustomerId, (List<SelectListItem>)ViewBag.customers, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Employee)
+    @Html.DropDownListFor(x => x.EmployeeId, (List<SelectListItem>)ViewBag.employees, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Number)
+    @Html.TextBoxFor(x => x.Number, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Price)
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TotalPrice)
+    @Html.TextBoxFor(x => x.TotalPrice, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
 

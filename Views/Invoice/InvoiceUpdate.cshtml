@@ -1,0 +1,38 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Invoice
+@{
+    ViewBag.Title = "EmployeeAdd";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Fatura Güncelleme</h2>
+<br />
+
+@using (Html.BeginForm("Update", "Invoice", FormMethod.Post))
+{
+    @*<div class="form-group">*@
+        @Html.HiddenFor(x => x.InvoiceID)
+
+        @Html.Label("Seri No")
+        @Html.TextBoxFor(x => x.InvoiceSerialNo, new { @class = "form-control" })
+        <br />
+        @Html.Label("Sıra No")
+        @Html.TextBoxFor(x => x.InvoiceSquenceNo, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        <br />
+        @Html.Label("Saat")
+        @Html.TextBoxFor(x => x.Time, new { @class = "form-control" })
+        <br />
+        @Html.Label("Vergi Dairesi")
+        @Html.TextBoxFor(x => x.TaxOffice, new { @class = "form-control" })
+        <br />
+        @Html.Label("Teslim Eden")
+        @Html.TextBoxFor(x => x.Deliverir, new { @class = "form-control" })
+        <br />
+        @Html.Label("Teslim Alan")
+        @Html.TextBoxFor(x => x.Reciever, new { @class = "form-control" })
+        <br />
+    @*</div>*@
+    <button class="btn btn-info">Kaydet</button>
+}

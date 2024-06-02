@@ -1,0 +1,39 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<SalesTransaction>
+@{
+    ViewBag.Title = "SalesDetail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satış Detayı</h2>
+<br />
+<table class="table table-hover">
+    <tr>
+        <td> Satış ID</td>
+        <td> Ürün</td>
+        <td> Müşteri </td>
+        <td> Personel </td>
+        <td> Fiyat </td>
+        <td> Adet </td>
+        <td> Toplam </td>
+        <td> Tarih </td>
+        <td>  </td>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.SalesID</td>
+    <td>@x.Product.ProductName</td>
+    <td>@x.Customer.CustomerName @x.Customer.CustomerSurname</td>
+    <td>@x.Employee.EmployeeName @x.Employee.EmployeeSurname</td>
+    <td>@x.Price</td>
+    <td>@x.Number</td>
+    <td>@x.TotalPrice</td>
+    <td>@x.Date</td>
+</tr>
+    }
+</table>
+<button class="btn btn-primary">Yazdır</button>
+
+

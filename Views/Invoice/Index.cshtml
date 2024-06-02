@@ -1,0 +1,45 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Invoice>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Faturalar</h2>
+
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>ID</th>
+        <th>Seri No</th>
+        <th>Sıra No</th>
+        <th>Vergi Dairesi</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Toplam</th>
+        @*<th>Güncelle</th>
+        <th>Detay</th>*@
+    </tr>
+    @foreach (var k in Model)
+    {
+<tr>
+    <td>@k.InvoiceID</td>
+    <td>@k.InvoiceSerialNo</td>
+    <td>@k.InvoiceSquenceNo</td>
+    <td>@k.TaxOffice</td>
+    <td>@k.Date.ToString("yyyy-MM-dd")</td>
+    <td>@k.Time</td>
+    <td>@k.Deliverir</td>
+    <td>@k.Reciever</td>
+    <td>@k.Total</td>
+    <td><a href="/Invoice/InvoiceUpdate/@k.InvoiceID" class="btn btn-success">Güncelle</a></td>
+    <td><a href="/Invoice/InvoiceDetail/@k.InvoiceID" class="btn btn-secondary">Detaylar</a></td>
+
+</tr>
+    }
+</table>
+<a href="/Invoice/InvoiceAdd" class="btn btn-primary">Yeni Fatura Girişi</a>
+
+
+

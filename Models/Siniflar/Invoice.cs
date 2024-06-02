@@ -17,17 +17,21 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(6)]
         public string InvoiceSquenceNo { get; set; }
+        [Column(TypeName = "Date")]
         public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        [Column(TypeName = "char")]
+        [StringLength(5)]
+        public string Time { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(60)]
-        public string TaxAdministration { get; set; }
+        public string TaxOffice { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string Deliverir{ get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string Reciever { get; set; }
+        public decimal Total{ get; set; }
         public ICollection<InvoiceItem> InvoiceItems { get; set; }
     }
 }

@@ -23,19 +23,23 @@
     </tr>
     @foreach (var x in Model)
     {
-<tr>
-    <td>@x.SalesID</td>
-    <td>@x.Product.ProductName</td>
-    <td>@x.Customer.CustomerName @x.Customer.CustomerSurname</td>
-    <td>@x.Employee.EmployeeName @x.Employee.EmployeeSurname</td>
-    <td>@x.Number</td>
-    <td>@x.Price</td>
-    <td>@x.TotalPrice</td>
-    <td>@x.Date</td>
-    <td><a href="/Sales/SalesUpdate/@x.SalesID" class="btn btn-success">Güncelle</a></td>
-        <td><a href="/Sales/SalesDetail/@x.SalesID" class="btn btn-secondary">Detaylar</a></td>
+        <tr>
+            <td>@x.SalesID</td>
+            <td>@x.Product.ProductName</td>
+            <td>@x.Customer.CustomerName @x.Customer.CustomerSurname</td>
+            <td>@x.Employee.EmployeeName @x.Employee.EmployeeSurname</td>
+            <td>@x.Number</td>
+            <td>@x.Price</td>
+            <td>@x.TotalPrice</td>
+            <td>@x.Date</td>
+            <td><a href="/Sales/SalesUpdate/@x.SalesID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Sales/SalesDetail/@x.SalesID" class="btn btn-secondary">Detaylar</a></td>
 
-</tr>
+        </tr>
     }
 </table>
 <a href="/Sales/SalesAdd" class="btn btn-primary">Yeni Satış Yap</a>
+
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@

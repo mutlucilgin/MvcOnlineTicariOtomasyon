@@ -29,18 +29,18 @@
     </tr>
     @foreach (var e in Model)
     {
-<tr>
-    <td>@e.EmployeeID</td>
-    <td>@e.EmployeeName</td>
-    <td>@e.EmployeeSurname</td>
-    <td>@e.EmployeeImage</td>
-    <td><a href="/Department/DepartmentEmployeeSale/@e.EmployeeID" class="btn btn-default" 
-           style="background-color:navajowhite">Satışlar</a></td>
+        <tr>
+            <td>@e.EmployeeID</td>
+            <td>@e.EmployeeName</td>
+            <td>@e.EmployeeSurname</td>
+            <td>@e.EmployeeImage</td>
+            <td><a href="/Department/DepartmentEmployeeSale/@e.EmployeeID" class="btn btn-default" 
+                   style="background-color:navajowhite">Satışlar</a></td>
 
-    @*<td><a href="/Department/Delete/@k.DepartmentID" class="btn btn-danger">Sil</a></td>
-        <td><a href="/Department/DepartmentUpdate/@k.DepartmentID" class="btn btn-success">Güncelle</a></td>*@
+            @*<td><a href="/Department/Delete/@k.DepartmentID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Department/DepartmentUpdate/@k.DepartmentID" class="btn btn-success">Güncelle</a></td>*@
 
-</tr>
+        </tr>
     }
 </table>
 
