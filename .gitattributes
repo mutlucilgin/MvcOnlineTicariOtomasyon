@@ -1,0 +1,7 @@
+# C# dosyalarını ana dil olarak belirt
+* linguist-language=C#
+
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+
