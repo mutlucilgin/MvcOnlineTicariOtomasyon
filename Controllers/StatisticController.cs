@@ -48,8 +48,11 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             DateTime dt = DateTime.Today;
             var value15 = c.SalesTransactions.Count(x => x.Date >= dt).ToString();
             ViewBag.d15 = value15;
-            var value16 = c.SalesTransactions.Where(x => x.Date >= dt).Sum(x=>x.TotalPrice).ToString();
-            ViewBag.d16 = value16;
+            var value16 = c.SalesTransactions.Where(x => x.Date >= dt);
+            if(value16.Any())
+                ViewBag.d16 = value16.Sum(x => x.TotalPrice).ToString();
+            else
+                ViewBag.d16 = 0;
 
             return View();
         }
