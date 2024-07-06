@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
 
-namespace MvcOnlineTicariOtomasyon.Models.Siniflar
+namespace MvcOnlineTicariOtomasyon.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -80,5 +80,13 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         //    ViewBag.CustomerName = customerName;
         //    return View(values);
         //}
+
+        // Personel sayfamız vardı ama konuyu pekiştirmek ve daha güzel
+        // bir görüntü elde etmek için bu kısım oluşturuldu.
+        public ActionResult EmployeeList()
+        {
+            var values = c.Employees.ToList();
+            return View(values);
+        }
     }
 }

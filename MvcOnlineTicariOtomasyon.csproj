@@ -139,12 +139,14 @@
     <Compile Include="Controllers\ProductDetailController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
+    <Compile Include="Controllers\ToDoListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Siniflar\ClassGroup.cs" />
     <Compile Include="Models\Siniflar\Context.cs" />
-    <Compile Include="Models\Siniflar\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Models\Siniflar\Expense.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\InvoiceItem.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Models\Siniflar\ProductDetailModel.cs" />
     <Compile Include="Models\Siniflar\ProductMergeClass.cs" />
     <Compile Include="Models\Siniflar\SalesTransaction.cs" />
+    <Compile Include="Models\Siniflar\ToDoList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2305,6 +2308,15 @@
     <Content Include="thumber\js\swiper.min.js" />
     <Content Include="thumber\js\typed.js" />
     <Content Include="thumber\photos.html" />
+    <Content Include="weblogin\css\font-awesome.css" />
+    <Content Include="weblogin\css\popup-box.css" />
+    <Content Include="weblogin\css\style.css" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="weblogin\images\bg.jpg" />
+    <Content Include="weblogin\index.html" />
+    <Content Include="weblogin\js\jquery-2.1.4.min.js" />
+    <Content Include="weblogin\js\jquery.magnific-popup.js" />
+    <Content Include="weblogin\w3layouts-License.txt" />
     <Content Include="Web\dist\401.html" />
     <Content Include="Web\dist\404.html" />
     <Content Include="Web\dist\500.html" />
@@ -2806,6 +2818,18 @@
     <Content Include="thumber\scss\_site-blocks.scss" />
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\ProductDetail\Index.cshtml" />
+    <Content Include="Views\Statistic\SampleTables.cshtml" />
+    <Content Include="Views\Statistic\Partial_1.cshtml" />
+    <Content Include="Views\Statistic\Partial_2.cshtml" />
+    <Content Include="Views\Statistic\Partial_3.cshtml" />
+    <Content Include="Views\Statistic\Partial_4.cshtml" />
+    <Content Include="Views\Employee\EmployeeList.cshtml" />
+    <Content Include="Views\ToDoList\Index.cshtml" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.eot" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="weblogin\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

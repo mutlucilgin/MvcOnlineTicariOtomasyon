@@ -56,5 +56,59 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
             return View();
         }
+        public ActionResult SampleTables()
+        {
+            //Birinci yöntem 
+            //var query = from x in c.Customers
+            //            group x by x.CustomerCity into g
+            //            select new ClassGroup
+            //            {
+            //                City = g.Key,
+            //                Count = g.Count()
+            //            };
+
+            // İkinci yöntem
+            var values = c.Customers.GroupBy(x => x.CustomerCity).OrderBy(z=>z.Count()).Select(y =>
+              new ClassGroup
+              {
+                  Name = y.Key,
+                  Count = y.Count()
+              }). ToList();
+            return View(values);
+        }
+        public PartialViewResult Partial_1()
+        {
+            var values = from d in c.Departments
+                         join e in c.Employees on d.DepartmentID equals e.DepartmentId
+                         into g
+                         select new ClassGroup
+                         {
+                             Name = d.DepartmentName,
+                             Count = g.Count()
+                         };
+            return PartialView(values.ToList());
+        }
+        public PartialViewResult Partial_2()
+        {
+            var values = c.Customers.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial_3()
+        {
+            var values = c.Products.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial_4()
+        {
+            var values = from x in c.Products
+                         group x by x.Brand into g
+                         select new ClassGroup
+                         {
+                             Name = g.Key,
+                             Count = g.Count()
+                         };
+            return PartialView(values.ToList());
+        }
     }
+     
 }

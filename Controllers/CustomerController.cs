@@ -52,6 +52,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var customer = c.Customers.Find(cust.CustomerID);
             customer.CustomerName= cust.CustomerName;
             customer.CustomerSurname= cust.CustomerSurname;
+            customer.CustomerCity= cust.CustomerCity;
             customer.CustomerMail= cust.CustomerMail;
             
             c.SaveChanges();
