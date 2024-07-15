@@ -1,0 +1,44 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Customer
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<h2>Müşteri Bilgi Paneli</h2>
+<br />
+@using (Html.BeginForm("Index2", "CustomerPanel", FormMethod.Post))
+{ 
+<table class="table table-bordered">
+    <tr>
+        <td class="tableFirstColumn">Mail Adresi</td>
+        <td>
+            <label>@HttpContext.Current.User.Identity.Name</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableFirstColumn">Ad</td>
+        <td>@Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })</td>
+    </tr>
+    <tr>
+        <td class="tableFirstColumn">Soyad</td>
+        <td>@Html.TextBoxFor(x => x.CustomerSurname, new { @class = "form-control" })</td>
+    </tr>
+    <tr>
+        <td class="tableFirstColumn">Şehir</td>
+        <td>@Html.TextBoxFor(x => x.CustomerCity, new { @class = "form-control" })</td>
+    </tr>
+    <tr>
+        <td class="tableFirstColumn">Şifre</td>
+        <td>@Html.TextBoxFor(x => x.CustomerPassword, new { @class = "form-control" })</td>
+    </tr>
+</table>
+<button class="btn btn-outline-primary">Bilgilerimi Güncelle</button>
+}
+<style>
+    .tableFirstColumn{
+        width:110px;
+        align-content:center;
+    }
+</style>
+

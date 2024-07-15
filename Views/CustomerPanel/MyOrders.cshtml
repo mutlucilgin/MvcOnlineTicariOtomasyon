@@ -1,0 +1,25 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<SalesTransaction>
+@{
+    ViewBag.Title = "MyOrders";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+<br />
+<h2>Sipariş Geçmişlerim</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>Ürün Adı</td>
+        <td>Fiyat</td>
+        <td>Tarih</td>
+    </tr>
+    @foreach(var x in Model)
+            {
+<tr>
+    <td>@x.Product.ProductName</td>
+    <td>@x.TotalPrice</td>
+    <td>@Convert.ToDateTime(x.Date).ToString("dd-MM-yyyy HH:mm:ss")</td>
+</tr>
+            }
+</table>
+

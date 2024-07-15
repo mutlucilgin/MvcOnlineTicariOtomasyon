@@ -81,3 +81,7 @@ C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bi
 C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\EntityFramework.SqlServer.dll
 C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\EntityFramework.xml
 C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\EntityFramework.SqlServer.xml
+C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\PagedList.dll
+C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.dll
+C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\PagedList.xml
+C:\Users\CRAZY\Documents\Visual Studio 2019\Projects\MvcOnlineTicariOtomasyon\bin\PagedList.Mvc.xml

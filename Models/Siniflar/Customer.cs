@@ -25,6 +25,10 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [StringLength(50)]
         public string CustomerMail { get; set; }
         [Column(TypeName = "Varchar")]
+        [StringLength(50)]
+        public string CustomerPassword { get; set; }
+
+        [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string CustomerImage { get; set; }
         public bool State { get; set; }
